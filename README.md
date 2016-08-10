@@ -16,3 +16,8 @@ ORDER BY o.object_id,xidusn DESC;
 --alter system kill session 'sid, serial#'
 --alter system kill session '18, 1033';
 ---------------------------------------------------------------------
+
+
+------------------------把列变成行Oracle-----------------------------
+LISTAGG() 方法
+SELECT cstbsq,LISTAGG(CSTRNO, '/') WITHIN GROUP(ORDER BY CSTRNO) AS CSTRNO
